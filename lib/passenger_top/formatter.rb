@@ -6,7 +6,7 @@ module PassengerTop
     end
 
     def simple
-      @data.map do |client_id, client|
+      @simple ||= @data.map do |client_id, client|
         {
           thread: client.dig("thread_name"),
           client_id: client_id,
@@ -21,7 +21,7 @@ module PassengerTop
     end
 
     def slow
-      simple.select { |row| row[:duration] > 5 }
+      @slow ||= simple.select { |row| row[:duration] > 5 }
     end
 
   end
