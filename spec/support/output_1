@@ -1,0 +1,276 @@
+Version : 6.0.4
+Date    : 2022-06-11 16:19:21 +0100
+Instance: N01ZUpbe (nginx/1.17.3 Phusion_Passenger/6.0.4)
+
+{
+   "thread1" : {
+      "active_client_count" : 2,
+      "active_clients" : {
+         "1-105889" : {
+            "connected_at" : {
+               "local" : "Sat Jun 11 10:26:40 2022",
+               "relative" : "1s ago",
+               "relative_timestamp" : -1.5037136077880859,
+               "timestamp" : 1654943200.360842
+            },
+            "connection_state" : "ACTIVE",
+            "current_request" : {
+               "app_response_http_state" : "PARSING_HEADERS",
+               "app_sink_state" : {
+                  "callback_in_progress" : false,
+                  "initialized" : true,
+                  "io_watcher_active" : false
+               },
+               "app_source_state" : {
+                  "callback_in_progress" : false,
+                  "initialized" : true,
+                  "io_watcher_active" : true
+               },
+               "flags" : {
+                  "dechunk_response" : true,
+                  "https" : false,
+                  "request_body_buffering" : false
+               },
+               "host" : "apply.wbs.ac.uk",
+               "http_major" : 1,
+               "http_minor" : 1,
+               "http_state" : "COMPLETE",
+               "last_data_receive_time" : {
+                  "local" : "Sat Jun 11 10:26:40 2022",
+                  "relative" : "1s ago",
+                  "relative_timestamp" : -1.5037136077880859,
+                  "timestamp" : 1654943200.3608191
+               },
+               "last_data_send_time" : null,
+               "method" : "GET",
+               "path" : "/api/search?token=57de974d457728c99606b0e2612a178769734058f2a1de4eb2195e90f3171aca&q=joe",
+               "refcount" : 1,
+               "request_body_already_read" : 0,
+               "request_body_fully_read" : true,
+               "request_body_type" : "NO_BODY",
+               "response_begun" : false,
+               "session" : {
+                  "gupid" : "1a4df6d-oEvGDlsWZX",
+                  "pid" : 29238
+               },
+               "session_checkout_try" : 1,
+               "started_at" : {
+                  "local" : "Sat Jun 11 10:26:40 2022",
+                  "relative" : "1s ago",
+                  "relative_timestamp" : -1.5037136077880859,
+                  "timestamp" : 1654943200.3608291
+               },
+               "state" : "WAITING_FOR_APP_OUTPUT",
+               "sticky_session" : false,
+               "want_keep_alive" : false
+            },
+            "lingering_request_count" : 0,
+            "name" : "1-105889",
+            "number" : 105889,
+            "output_channel_state" : {
+               "bytes_buffered" : {
+                  "bytes" : 0,
+                  "human_readable" : "0 bytes"
+               },
+               "callback_in_progress" : false,
+               "mode" : "IN_MEMORY_MODE",
+               "nbuffers" : 0,
+               "reader_state" : "RS_INACTIVE"
+            },
+            "refcount" : 2,
+            "requests_begun" : 1
+         },
+         "1-105890" : {
+            "connected_at" : {
+               "local" : "Sat Jun 11 10:26:41 2022",
+               "relative" : "0s ago",
+               "relative_timestamp" : -0.44190073013305664,
+               "timestamp" : 1654943201.422616
+            },
+            "connection_state" : "ACTIVE",
+            "current_request" : {
+               "app_response_http_state" : "PARSING_HEADERS",
+               "app_sink_state" : {
+                  "callback_in_progress" : false,
+                  "initialized" : true,
+                  "io_watcher_active" : false
+               },
+               "app_source_state" : {
+                  "callback_in_progress" : false,
+                  "initialized" : true,
+                  "io_watcher_active" : true
+               },
+               "flags" : {
+                  "dechunk_response" : true,
+                  "https" : false,
+                  "request_body_buffering" : false
+               },
+               "host" : "apply.aspireleaders.org",
+               "http_major" : 1,
+               "http_minor" : 1,
+               "http_state" : "COMPLETE",
+               "last_data_receive_time" : {
+                  "local" : "Sat Jun 11 10:26:41 2022",
+                  "relative" : "0s ago",
+                  "relative_timestamp" : -0.44190073013305664,
+                  "timestamp" : 1654943201.422574
+               },
+               "last_data_send_time" : null,
+               "method" : "GET",
+               "path" : "/api/accounts/verification",
+               "refcount" : 1,
+               "request_body_already_read" : 0,
+               "request_body_fully_read" : true,
+               "request_body_type" : "NO_BODY",
+               "response_begun" : false,
+               "session" : {
+                  "gupid" : "1a4df7b-btttSHrqlV",
+                  "pid" : 3499
+               },
+               "session_checkout_try" : 1,
+               "started_at" : {
+                  "local" : "Sat Jun 11 10:26:41 2022",
+                  "relative" : "0s ago",
+                  "relative_timestamp" : -0.44190073013305664,
+                  "timestamp" : 1654943201.422595
+               },
+               "state" : "WAITING_FOR_APP_OUTPUT",
+               "sticky_session" : false,
+               "want_keep_alive" : false
+            },
+            "lingering_request_count" : 0,
+            "name" : "1-105890",
+            "number" : 105890,
+            "output_channel_state" : {
+               "bytes_buffered" : {
+                  "bytes" : 0,
+                  "human_readable" : "0 bytes"
+               },
+               "callback_in_progress" : false,
+               "mode" : "IN_MEMORY_MODE",
+               "nbuffers" : 0,
+               "reader_state" : "RS_INACTIVE"
+            },
+            "refcount" : 2,
+            "requests_begun" : 1
+         }
+      },
+      "client_accept_speed" : {
+         "1h" : {
+            "averaged_over" : "1 hour",
+            "per" : "minute",
+            "value" : 24.109999999999999
+         },
+         "1m" : {
+            "averaged_over" : "1 minute",
+            "per" : "minute",
+            "value" : 31.789999999999999
+         }
+      },
+      "disconnected_client_count" : 0,
+      "disconnected_clients" : {},
+      "free_client_count" : 0,
+      "free_request_count" : 7,
+      "mbuf_pool" : {
+         "active_blocks" : 2,
+         "active_memory" : {
+            "bytes" : 8192,
+            "human_readable" : "8.0 KB"
+         },
+         "chunk_size" : 4096,
+         "free_blocks" : 41,
+         "offset" : 4048,
+         "spare_memory" : {
+            "bytes" : 167936,
+            "human_readable" : "164.0 KB"
+         }
+      },
+      "peak_active_client_count" : 9,
+      "pid" : 3025,
+      "request_begin_speed" : {
+         "1h" : {
+            "averaged_over" : "1 hour",
+            "per" : "minute",
+            "value" : 24.109999999999999
+         },
+         "1m" : {
+            "averaged_over" : "1 minute",
+            "per" : "minute",
+            "value" : 31.789999999999999
+         }
+      },
+      "server_state" : "ACTIVE",
+      "total_bytes_consumed" : 381521355,
+      "total_clients_accepted" : 105890,
+      "total_requests_begun" : 105879,
+      "turbocaching" : {
+         "fetches" : 1,
+         "hit_ratio" : 0.0,
+         "hits" : 0,
+         "store_success_ratio" : null,
+         "store_successes" : 0,
+         "stores" : 1
+      }
+   },
+   "thread2" : {
+      "active_client_count" : 0,
+      "active_clients" : {},
+      "client_accept_speed" : {
+         "1h" : {
+            "averaged_over" : "1 hour",
+            "per" : "minute",
+            "value" : 24.120000000000001
+         },
+         "1m" : {
+            "averaged_over" : "1 minute",
+            "per" : "minute",
+            "value" : 32.350000000000001
+         }
+      },
+      "disconnected_client_count" : 0,
+      "disconnected_clients" : {},
+      "free_client_count" : 0,
+      "free_request_count" : 9,
+      "mbuf_pool" : {
+         "active_blocks" : 0,
+         "active_memory" : {
+            "bytes" : 0,
+            "human_readable" : "0 bytes"
+         },
+         "chunk_size" : 4096,
+         "free_blocks" : 41,
+         "offset" : 4048,
+         "spare_memory" : {
+            "bytes" : 167936,
+            "human_readable" : "164.0 KB"
+         }
+      },
+      "peak_active_client_count" : 9,
+      "pid" : 3025,
+      "request_begin_speed" : {
+         "1h" : {
+            "averaged_over" : "1 hour",
+            "per" : "minute",
+            "value" : 24.120000000000001
+         },
+         "1m" : {
+            "averaged_over" : "1 minute",
+            "per" : "minute",
+            "value" : 32.350000000000001
+         }
+      },
+      "server_state" : "ACTIVE",
+      "total_bytes_consumed" : 425237511,
+      "total_clients_accepted" : 105890,
+      "total_requests_begun" : 105880,
+      "turbocaching" : {
+         "fetches" : 1,
+         "hit_ratio" : 0.0,
+         "hits" : 0,
+         "store_success_ratio" : 0.0,
+         "store_successes" : 0,
+         "stores" : 1
+      }
+   },
+   "threads" : 8
+}
