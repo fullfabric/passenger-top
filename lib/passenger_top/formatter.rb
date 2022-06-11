@@ -1,6 +1,8 @@
 module PassengerTop
   class Formatter
 
+    SLOW_REQUEST_THRESHOLD = 1
+
     def initialize(data)
       @data = data
     end
@@ -21,7 +23,7 @@ module PassengerTop
     end
 
     def slow
-      @slow ||= simple.select { |row| row[:duration] > 5 }
+      @slow ||= simple.select { |row| row[:duration] >= SLOW_REQUEST_THRESHOLD }
     end
 
   end
