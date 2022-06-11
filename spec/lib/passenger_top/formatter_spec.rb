@@ -1,7 +1,7 @@
 describe PassengerTop::Formatter do
 
   let!(:contents) { File.read("./spec/support/output_1") }
-  let!(:data) { PassengerTop::Parser.parse!(json) }
+  let!(:data) { PassengerTop::Parser.parse!(contents) }
 
   let!(:formatter) { PassengerTop::Formatter.new(data) }
 

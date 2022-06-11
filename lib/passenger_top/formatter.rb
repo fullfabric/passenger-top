@@ -8,14 +8,14 @@ module PassengerTop
     def simple
       @data.map do |client_id, client|
         {
-          thread: client["thread_name"],
+          thread: client.dig("thread_name"),
           client_id: client_id,
-          pid: client["current_request"]["session"]["pid"],
-          state: client["connection_state"],
-          method: client["current_request"]["method"],
-          host: client["current_request"]["host"],
-          path: client["current_request"]["path"],
-          duration: -client["connected_at"]["relative_timestamp"].round(2)
+          pid: client.dig("current_request", "session", "pid"),
+          state: client.dig("connection_state"),
+          method: client.dig("current_request", "method"),
+          host: client.dig("current_request", "host"),
+          path: client.dig("current_request", "path"),
+          duration: -client.dig("connected_at", "relative_timestamp")&.round(2)
         }
       end
     end

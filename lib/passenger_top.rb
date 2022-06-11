@@ -2,7 +2,7 @@ module PassengerTop
 end
 
 require "awesome_print"
-require 'byebug'; alias bb byebug
+require "byebug"; alias bb byebug
 
 require "json"
 require "table_print"
