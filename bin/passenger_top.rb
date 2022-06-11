@@ -14,6 +14,7 @@ data = {}
 logger = File.open("./passenger_top.log", "wb")
 printer = PassengerTop::Printer.new(logger: logger)
 tp.set(:io, printer)
+tp.set(:max_width, 50)
 
 until $stop do
   data.each { |client_id, client| data[client_id]["connection_state"] = "COMPLETE" }
