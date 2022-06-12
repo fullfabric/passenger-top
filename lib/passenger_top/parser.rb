@@ -14,6 +14,8 @@ module PassengerTop
 
         outer.merge(client_hash)
       end
+    rescue => e
+      {}
     end
 
   end

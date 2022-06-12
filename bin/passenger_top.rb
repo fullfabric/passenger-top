@@ -10,35 +10,17 @@ iterations = 1
 
 data = {}
 
-# logger = File.open("./passenger_top.#{Process.pid}.log", "wb")
-logger = File.open("./passenger_top.log", "wb")
-printer = PassengerTop::Printer.new(logger: logger)
-tp.set(:io, printer)
-tp.set(:max_width, 100)
+console = PassengerTop::Printer::Console.new(io: STDOUT)
 
 until $stop do
   data.each { |client_id, client| data[client_id]["connection_state"] = "COMPLETE" }
 
-  response = `passenger-status --show=requests`
-  data.merge! PassengerTop::Parser.parse!(response)
+  stdout, stderr, status = Open3.capture3("passenger-status --show=requests")
+  data.merge! PassengerTop::Parser.parse!(stdout)
 
   if write
     write = false
-
-    formatter = PassengerTop::Formatter.new(data)
-
-    printer.clear
-
-    printer.write "Current iteration: #{iterations}\n"
-    printer.write "Requests logged: #{formatter.simple.size}\n"
-    printer.write "Slow requests logged: #{formatter.slow.size}\n\n"
-
-    printer.write "Requests\n"
-    tp(formatter.simple.last(10))
-
-    printer.write "\n\nSlow requests\n"
-    tp(formatter.slow.last(10))
-    printer.write("\n")
+    console.write(data)
   end
 
   iterations += 1
@@ -47,5 +29,11 @@ until $stop do
   sleep 0.1
 end
 
-puts
-exit(0)
+at_exit do
+
+  # logger = File.open("./passenger_top.#{Process.pid}.log", "wb")
+  file = File.open("./passenger_top.log", "wb")
+
+  file = PassengerTop::Printer::File.new(io: file)
+  file.write(data)
+end
