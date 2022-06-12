@@ -1,3 +1,6 @@
 .byebug_history
 .bundle
 vendor
+
+passenger_top.log
+passenger_top.*.log

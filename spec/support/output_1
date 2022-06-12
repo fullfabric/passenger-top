@@ -10,7 +10,7 @@ Instance: N01ZUpbe (nginx/1.17.3 Phusion_Passenger/6.0.4)
             "connected_at" : {
                "local" : "Sat Jun 11 10:26:40 2022",
                "relative" : "1s ago",
-               "relative_timestamp" : -1.5037136077880859,
+               "relative_timestamp" : -0.5037136077880859,
                "timestamp" : 1654943200.360842
             },
             "connection_state" : "ACTIVE",
